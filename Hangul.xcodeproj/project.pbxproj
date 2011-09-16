@@ -7,37 +7,96 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38FA21F01423219E00444D67 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA21EF1423219E00444D67 /* Cocoa.framework */; };
+		3890A8B51423238F00067337 /* HGCharacter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8B11423238E00067337 /* HGCharacter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3890A8B61423238F00067337 /* HGCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8B21423238E00067337 /* HGCharacter.m */; };
+		3890A8B71423238F00067337 /* HGInputContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8B31423238E00067337 /* HGInputContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3890A8B81423238F00067337 /* HGInputContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8B41423238E00067337 /* HGInputContext.m */; };
+		3890A8CE1423247C00067337 /* hangul-gettext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8C61423247C00067337 /* hangul-gettext.h */; };
+		3890A8CF1423247C00067337 /* hangul.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8C71423247C00067337 /* hangul.h */; settings = {ATTRIBUTES = (); }; };
+		3890A8D01423247C00067337 /* hangulctype.c in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8C81423247C00067337 /* hangulctype.c */; };
+		3890A8D11423247C00067337 /* hangulinputcontext.c in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8C91423247C00067337 /* hangulinputcontext.c */; };
+		3890A8D21423247C00067337 /* hangulinternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8CA1423247C00067337 /* hangulinternals.h */; };
+		3890A8D31423247C00067337 /* hangulkeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8CB1423247C00067337 /* hangulkeyboard.h */; };
+		3890A8D41423247C00067337 /* hanja.c in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8CC1423247C00067337 /* hanja.c */; };
+		3890A8D51423247C00067337 /* hanjacompatible.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8CD1423247C00067337 /* hanjacompatible.h */; };
+		3890A8ED1423259600067337 /* libhangul.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3890A8BE1423245500067337 /* libhangul.a */; };
+		3890A8EE142325A400067337 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA21F41423219E00444D67 /* Foundation.framework */; };
+		3890AA4A142326D500067337 /* hangul.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8C71423247C00067337 /* hangul.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38FA21FA1423219E00444D67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38FA21F81423219E00444D67 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3890A8EB1423259200067337 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38FA21E21423219E00444D67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3890A8BD1423245500067337;
+			remoteInfo = hangul;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3890A8B11423238E00067337 /* HGCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGCharacter.h; sourceTree = "<group>"; };
+		3890A8B21423238E00067337 /* HGCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGCharacter.m; sourceTree = "<group>"; };
+		3890A8B31423238E00067337 /* HGInputContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGInputContext.h; sourceTree = "<group>"; };
+		3890A8B41423238E00067337 /* HGInputContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGInputContext.m; sourceTree = "<group>"; };
+		3890A8BE1423245500067337 /* libhangul.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhangul.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3890A8C61423247C00067337 /* hangul-gettext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hangul-gettext.h"; sourceTree = "<group>"; };
+		3890A8C71423247C00067337 /* hangul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangul.h; sourceTree = "<group>"; };
+		3890A8C81423247C00067337 /* hangulctype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hangulctype.c; sourceTree = "<group>"; };
+		3890A8C91423247C00067337 /* hangulinputcontext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hangulinputcontext.c; sourceTree = "<group>"; };
+		3890A8CA1423247C00067337 /* hangulinternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangulinternals.h; sourceTree = "<group>"; };
+		3890A8CB1423247C00067337 /* hangulkeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangulkeyboard.h; sourceTree = "<group>"; };
+		3890A8CC1423247C00067337 /* hanja.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hanja.c; sourceTree = "<group>"; };
+		3890A8CD1423247C00067337 /* hanjacompatible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hanjacompatible.h; sourceTree = "<group>"; };
 		38FA21EC1423219E00444D67 /* Hangul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hangul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38FA21EF1423219E00444D67 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		38FA21F21423219E00444D67 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		38FA21F31423219E00444D67 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		38FA21F41423219E00444D67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		38FA21F71423219E00444D67 /* Hangul-Info.plist */ = {isa = PBXFileReference; path = "Hangul-Info.plist"; sourceTree = "<group>"; };
+		38FA21F71423219E00444D67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38FA21F91423219E00444D67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		38FA21FB1423219E00444D67 /* Hangul-Prefix.pch */ = {isa = PBXFileReference; path = "Hangul-Prefix.pch"; sourceTree = "<group>"; };
+		38FA21FB1423219E00444D67 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3890A8BC1423245500067337 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38FA21E81423219E00444D67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38FA21F01423219E00444D67 /* Cocoa.framework in Frameworks */,
+				3890A8ED1423259600067337 /* libhangul.a in Frameworks */,
+				3890A8EE142325A400067337 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3890A8C41423247C00067337 /* hangul */ = {
+			isa = PBXGroup;
+			children = (
+				3890A8C61423247C00067337 /* hangul-gettext.h */,
+				3890A8C71423247C00067337 /* hangul.h */,
+				3890A8C81423247C00067337 /* hangulctype.c */,
+				3890A8C91423247C00067337 /* hangulinputcontext.c */,
+				3890A8CA1423247C00067337 /* hangulinternals.h */,
+				3890A8CB1423247C00067337 /* hangulkeyboard.h */,
+				3890A8CC1423247C00067337 /* hanja.c */,
+				3890A8CD1423247C00067337 /* hanjacompatible.h */,
+			);
+			name = hangul;
+			path = libhangul/hangul;
+			sourceTree = "<group>";
+		};
 		38FA21E01423219E00444D67 = {
 			isa = PBXGroup;
 			children = (
 				38FA21F51423219E00444D67 /* Hangul */,
+				3890A8C41423247C00067337 /* hangul */,
 				38FA21EE1423219E00444D67 /* Frameworks */,
 				38FA21ED1423219E00444D67 /* Products */,
 			);
@@ -47,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				38FA21EC1423219E00444D67 /* Hangul.framework */,
+				3890A8BE1423245500067337 /* libhangul.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,25 +114,18 @@
 		38FA21EE1423219E00444D67 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				38FA21EF1423219E00444D67 /* Cocoa.framework */,
-				38FA21F11423219E00444D67 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		38FA21F11423219E00444D67 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				38FA21F21423219E00444D67 /* AppKit.framework */,
-				38FA21F31423219E00444D67 /* CoreData.framework */,
 				38FA21F41423219E00444D67 /* Foundation.framework */,
 			);
-			name = "Other Frameworks";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		38FA21F51423219E00444D67 /* Hangul */ = {
 			isa = PBXGroup;
 			children = (
+				3890A8B11423238E00067337 /* HGCharacter.h */,
+				3890A8B21423238E00067337 /* HGCharacter.m */,
+				3890A8B31423238E00067337 /* HGInputContext.h */,
+				3890A8B41423238E00067337 /* HGInputContext.m */,
 				38FA21F61423219E00444D67 /* Supporting Files */,
 			);
 			path = Hangul;
@@ -81,9 +134,9 @@
 		38FA21F61423219E00444D67 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				38FA21F71423219E00444D67 /* Hangul-Info.plist */,
+				38FA21F71423219E00444D67 /* Info.plist */,
 				38FA21F81423219E00444D67 /* InfoPlist.strings */,
-				38FA21FB1423219E00444D67 /* Hangul-Prefix.pch */,
+				38FA21FB1423219E00444D67 /* Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -91,16 +144,48 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3890A8BA1423245500067337 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3890A8CF1423247C00067337 /* hangul.h in Headers */,
+				3890A8CE1423247C00067337 /* hangul-gettext.h in Headers */,
+				3890A8D21423247C00067337 /* hangulinternals.h in Headers */,
+				3890A8D31423247C00067337 /* hangulkeyboard.h in Headers */,
+				3890A8D51423247C00067337 /* hanjacompatible.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38FA21E91423219E00444D67 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3890A8B51423238F00067337 /* HGCharacter.h in Headers */,
+				3890A8B71423238F00067337 /* HGInputContext.h in Headers */,
+				3890AA4A142326D500067337 /* hangul.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3890A8BD1423245500067337 /* hangul */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3890A8C31423246100067337 /* Build configuration list for PBXNativeTarget "hangul" */;
+			buildPhases = (
+				3890A8BA1423245500067337 /* Headers */,
+				3890A8BB1423245500067337 /* Sources */,
+				3890A8BC1423245500067337 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hangul;
+			productName = hangul;
+			productReference = 3890A8BE1423245500067337 /* libhangul.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		38FA21EB1423219E00444D67 /* Hangul */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38FA21FE1423219E00444D67 /* Build configuration list for PBXNativeTarget "Hangul" */;
@@ -113,6 +198,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3890A8EC1423259200067337 /* PBXTargetDependency */,
 			);
 			name = Hangul;
 			productName = Hangul;
@@ -137,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				38FA21EB1423219E00444D67 /* Hangul */,
+				3890A8BD1423245500067337 /* hangul */,
 			);
 		};
 /* End PBXProject section */
@@ -153,14 +240,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3890A8BB1423245500067337 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3890A8D01423247C00067337 /* hangulctype.c in Sources */,
+				3890A8D11423247C00067337 /* hangulinputcontext.c in Sources */,
+				3890A8D41423247C00067337 /* hanja.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38FA21E71423219E00444D67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3890A8B61423238F00067337 /* HGCharacter.m in Sources */,
+				3890A8B81423238F00067337 /* HGInputContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3890A8EC1423259200067337 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3890A8BD1423245500067337 /* hangul */;
+			targetProxy = 3890A8EB1423259200067337 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		38FA21F81423219E00444D67 /* InfoPlist.strings */ = {
@@ -174,6 +281,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3890A8BF1423245500067337 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = hangul;
+			};
+			name = Debug;
+		};
+		3890A8C01423245500067337 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = hangul;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		38FA21FC1423219E00444D67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -181,9 +318,9 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "LIBHANGUL_DEFAULT_HANJA_DIC=\\\"/Library/Frameworks/Hangul/Dictionary\\\"";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -197,8 +334,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "LIBHANGUL_DEFAULT_HANJA_DIC=\\\"/Library/Frameworks/Hangul/Dictionary\\\"";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
@@ -217,8 +354,9 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hangul/Hangul-Prefix.pch";
-				INFOPLIST_FILE = "Hangul/Hangul-Info.plist";
+				GCC_PREFIX_HEADER = Hangul/Prefix.pch;
+				INFOPLIST_FILE = Hangul/Info.plist;
+				INSTALL_PATH = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -235,8 +373,9 @@
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Hangul/Hangul-Prefix.pch";
-				INFOPLIST_FILE = "Hangul/Hangul-Info.plist";
+				GCC_PREFIX_HEADER = Hangul/Prefix.pch;
+				INFOPLIST_FILE = Hangul/Info.plist;
+				INSTALL_PATH = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -245,6 +384,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3890A8C31423246100067337 /* Build configuration list for PBXNativeTarget "hangul" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3890A8BF1423245500067337 /* Debug */,
+				3890A8C01423245500067337 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		38FA21E51423219E00444D67 /* Build configuration list for PBXProject "Hangul" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -261,6 +409,7 @@
 				38FA22001423219E00444D67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
