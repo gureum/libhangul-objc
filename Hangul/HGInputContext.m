@@ -120,16 +120,28 @@
     return string;
 }
 
+- (const HGUCSChar *)preeditHGUCSString {
+    return hangul_ic_get_preedit_string(self->context);
+}
+
 - (NSString *)commitString {
     NSString *string = [NSString stringWithHGUCSString:hangul_ic_get_commit_string(self->context)];
     ICLog(DEBUG_HANGUL, @"** HGInputContext -commitString : %@", string);
     return string;
 }
 
+- (const HGUCSChar *)commitHGUCSString {
+    return hangul_ic_get_commit_string(self->context);
+}
+
 - (NSString *)flushString {
     NSString *string = [NSString stringWithHGUCSString:hangul_ic_flush(self->context)];
     ICLog(DEBUG_HANGUL, @"** HGInputContext -flushString : %@", string);
     return string;
+}
+
+- (const HGUCSChar *)flushHGUCSString {
+    return hangul_ic_flush(self->context);
 }
 
 - (void)setOutputMode:(HGOutputMode)mode {

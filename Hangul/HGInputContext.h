@@ -94,14 +94,20 @@ typedef enum {
     @ref IMKInputController 의 -composedString 과 대응한다.
 */
 @property(nonatomic, readonly) NSString *preeditString;
+//! @brief  @ref hangul_ic_preedit_string
+@property(nonatomic, readonly) const HGUCSChar *preeditHGUCSString;
 //! @brief  @ref hangul_ic_commit_string
 @property(nonatomic, readonly) NSString *commitString;
+//! @brief  @ref hangul_ic_commit_string
+@property(nonatomic, readonly) const HGUCSChar *commitHGUCSString;
 /*!
     @brief  @ref hangul_ic_flush
  
     @discussion     현재 조합 중인 글자의 조합을 완료하고 @ref preeditString 을 결과로 돌려준다.
 */
 - (NSString *)flushString; // unclear naming...
+//! @brief  @ref hangul_ic_flush
+- (const HGUCSChar *)flushHGUCSString;
 
 //! @brief  @ref hangul_ic_set_output_mode 
 - (void)setOutputMode:(HGOutputMode)mode;
