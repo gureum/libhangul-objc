@@ -115,32 +115,32 @@
 }
 
 - (NSString *)preeditString {
-    NSString *string = [NSString stringWithHGUCSString:hangul_ic_get_preedit_string(self->context)];
+    NSString *string = [NSString stringWithUCSString:hangul_ic_get_preedit_string(self->context)];
     ICLog(DEBUG_HANGUL, @"** HGInputContext -preeditString : %@", string);
     return string;
 }
 
-- (const HGUCSChar *)preeditHGUCSString {
+- (const HGUCSChar *)preeditUCSString {
     return hangul_ic_get_preedit_string(self->context);
 }
 
 - (NSString *)commitString {
-    NSString *string = [NSString stringWithHGUCSString:hangul_ic_get_commit_string(self->context)];
+    NSString *string = [NSString stringWithUCSString:hangul_ic_get_commit_string(self->context)];
     ICLog(DEBUG_HANGUL, @"** HGInputContext -commitString : %@", string);
     return string;
 }
 
-- (const HGUCSChar *)commitHGUCSString {
+- (const HGUCSChar *)commitUCSString {
     return hangul_ic_get_commit_string(self->context);
 }
 
 - (NSString *)flushString {
-    NSString *string = [NSString stringWithHGUCSString:hangul_ic_flush(self->context)];
+    NSString *string = [NSString stringWithUCSString:hangul_ic_flush(self->context)];
     ICLog(DEBUG_HANGUL, @"** HGInputContext -flushString : %@", string);
     return string;
 }
 
-- (const HGUCSChar *)flushHGUCSString {
+- (const HGUCSChar *)flushUCSString {
     return hangul_ic_flush(self->context);
 }
 
@@ -178,15 +178,15 @@ inline NSString *HGKeyboardNameAtIndex(NSUInteger index) {
 
 @implementation NSString (HGUCS)
 
-- (id)initWithHGUCSString:(const HGUCSChar *)ucsString {
+- (id)initWithUCSString:(const HGUCSChar *)ucsString {
     NSInteger length = wcslen((const wchar_t *)ucsString)*sizeof(HGUCSChar); // XXX: 길이 알아내는 or 길이 없이 NSString 만드는 방법이 있을까?
     // initWithCString + UTF32LE 로는 안된다. null 문자가 보이면 무조건 종료하는 듯
     //return [self initWithBytesNoCopy:(void *)ucsString length:length encoding:NSUTF32LittleEndianStringEncoding freeWhenDone:NO];
     return [self initWithBytes:ucsString length:length encoding:NSUTF32LittleEndianStringEncoding ];
 }
 
-+ (id)stringWithHGUCSString:(const HGUCSChar *)ucsString {
-    return [[[self alloc] initWithHGUCSString:ucsString] autorelease];
++ (id)stringWithUCSString:(const HGUCSChar *)ucsString {
+    return [[[self alloc] initWithUCSString:ucsString] autorelease];
 }
 
 @end

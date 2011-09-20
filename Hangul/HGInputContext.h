@@ -95,11 +95,11 @@ typedef enum {
 */
 @property(nonatomic, readonly) NSString *preeditString;
 //! @brief  @ref hangul_ic_preedit_string
-@property(nonatomic, readonly) const HGUCSChar *preeditHGUCSString;
+@property(nonatomic, readonly) const HGUCSChar *preeditUCSString;
 //! @brief  @ref hangul_ic_commit_string
 @property(nonatomic, readonly) NSString *commitString;
 //! @brief  @ref hangul_ic_commit_string
-@property(nonatomic, readonly) const HGUCSChar *commitHGUCSString;
+@property(nonatomic, readonly) const HGUCSChar *commitUCSString;
 /*!
     @brief  @ref hangul_ic_flush
  
@@ -107,7 +107,7 @@ typedef enum {
 */
 - (NSString *)flushString; // unclear naming...
 //! @brief  @ref hangul_ic_flush
-- (const HGUCSChar *)flushHGUCSString;
+- (const HGUCSChar *)flushUCSString;
 
 //! @brief  @ref hangul_ic_set_output_mode 
 - (void)setOutputMode:(HGOutputMode)mode;
@@ -144,8 +144,8 @@ NSString *HGKeyboardNameAtIndex(NSUInteger index);
 @interface NSString (HGUCS)
 
 //! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
-- (id)initWithHGUCSString:(const HGUCSChar *)ucsString;
+- (id)initWithUCSString:(const HGUCSChar *)ucsString;
 //! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
-+ (id)stringWithHGUCSString:(const HGUCSChar *)ucsString;
++ (id)stringWithUCSString:(const HGUCSChar *)ucsString;
 
 @end
