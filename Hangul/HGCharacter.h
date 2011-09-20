@@ -67,3 +67,22 @@ void HGGetJamoFromSyllable(HGUCSChar syllable, HGUCSChar *choseong,
 //! @ref hangul_jamos_to_syllables
 NSInteger HGGetSyllablesFromJamos(const HGUCSChar* jamos, NSInteger jamosLength,
                                   HGUCSChar* syllables, NSInteger syllablesLength);
+
+
+/*!
+ @brief  HGUSCChar - NSString 변환
+ 
+ libhangul의 ucschar 문자열을 NSString 으로 변환하는 생성자 카테고리이다.
+ */
+@interface NSString (HGUCS)
+
+//! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
+- (id)initWithUCSString:(const HGUCSChar *)ucsString;
+//! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
+- (id)initWithUCSString:(const HGUCSChar *)ucsString length:(NSUInteger)length;
+//! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
++ (id)stringWithUCSString:(const HGUCSChar *)ucsString;
+//! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
++ (id)stringWithUCSString:(const HGUCSChar *)ucsString length:(NSUInteger)length;
+
+@end

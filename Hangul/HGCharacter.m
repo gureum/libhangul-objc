@@ -90,3 +90,30 @@ inline NSInteger HGGetSyllablesFromJamos(const HGUCSChar* jamos, NSInteger jamos
                                          HGUCSChar* syllables, NSInteger syllablesLength) {
     return (NSInteger)hangul_jamos_to_syllables(syllables, (int)syllablesLength, jamos, (int)jamosLength);
 }
+
+
+#include <wchar.h>
+
+@implementation NSString (HGUCS)
+
+- (id)initWithUCSString:(const HGUCSChar *)ucsString {
+    NSInteger length = wcslen((const wchar_t *)ucsString); // XXX: 길이 알아내는 or 길이 없이 NSString 만드는 방법이 있을까?
+    // initWithCString + UTF32LE 로는 안된다. null 문자가 보이면 무조건 종료하는 듯
+    //return [self initWithBytesNoCopy:(void *)ucsString length:length encoding:NSUTF32LittleEndianStringEncoding freeWhenDone:NO];
+    return [self initWithBytes:ucsString length:length*sizeof(HGUCSChar) encoding:NSUTF32LittleEndianStringEncoding];
+}
+
+- (id)initWithUCSString:(const HGUCSChar *)ucsString length:(NSUInteger)length {
+    return [self initWithBytes:ucsString length:length*sizeof(HGUCSChar) encoding:NSUTF32LittleEndianStringEncoding];
+}
+
++ (id)stringWithUCSString:(const HGUCSChar *)ucsString {
+    return [[[self alloc] initWithUCSString:ucsString] autorelease];
+}
+
++ (id)stringWithUCSString:(const HGUCSChar *)ucsString length:(NSUInteger)length {
+    return [[[self alloc] initWithUCSString:ucsString length:length] autorelease];
+}
+
+@end
+

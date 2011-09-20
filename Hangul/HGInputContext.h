@@ -135,17 +135,3 @@ NSString *HGKeyboardIdentifierAtIndex(NSUInteger index);
 //! @brief  @ref hangul_ic_get_keyboard_name
 NSString *HGKeyboardNameAtIndex(NSUInteger index);
 
-
-/*!
-    @brief  HGUSCChar - NSString 변환
- 
-    libhangul의 ucschar 문자열을 NSString 으로 변환하는 생성자 카테고리이다.
-*/
-@interface NSString (HGUCS)
-
-//! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
-- (id)initWithUCSString:(const HGUCSChar *)ucsString;
-//! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
-+ (id)stringWithUCSString:(const HGUCSChar *)ucsString;
-
-@end
