@@ -44,7 +44,7 @@ HGUCSChar HGCompatibleJamoFromJamo(HGUCSChar character);
 HGUCSChar HGJongseongFromChoseong(HGUCSChar character);
 //! @ref hangul_jongseong_to_choseong
 HGUCSChar HGChoseongFromJongseong(HGUCSChar character);
-//! @ref hangul_jongseong_dicompose
+//! @ref hangul_jongseong_decompose
 void HGGetDecomposedCharactersFromJongseong(HGUCSChar character,
                                             HGUCSChar* jongseong,
                                             HGUCSChar* choseong);

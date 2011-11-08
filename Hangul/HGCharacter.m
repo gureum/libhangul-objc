@@ -59,7 +59,7 @@ inline HGUCSChar HGChoseongFromJongseong(HGUCSChar character) {
 inline void HGGetDecomposedCharactersFromJongseong(HGUCSChar character,
                                                    HGUCSChar* jongseong, 
                                                    HGUCSChar* choseong) {
-    return hangul_jongseong_dicompose(character, jongseong, choseong);
+    return hangul_jongseong_decompose(character, jongseong, choseong);
 }
 
 inline const HGUCSChar* HGPreviousSyllableInJamoString(const HGUCSChar* jamoString,
