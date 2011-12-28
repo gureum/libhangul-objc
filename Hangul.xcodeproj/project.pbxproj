@@ -22,6 +22,7 @@
 		3890A8ED1423259600067337 /* libhangul.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3890A8BE1423245500067337 /* libhangul.a */; };
 		3890A8EE142325A400067337 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA21F41423219E00444D67 /* Foundation.framework */; };
 		3890AA4A142326D500067337 /* hangul.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8C71423247C00067337 /* hangul.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38B4A81914AB3F19003E6CEE /* hangulinternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8CA1423247C00067337 /* hangulinternals.h */; };
 		38FA21FA1423219E00444D67 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38FA21F81423219E00444D67 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -163,6 +164,7 @@
 				3890A8B51423238F00067337 /* HGCharacter.h in Headers */,
 				3890A8B71423238F00067337 /* HGInputContext.h in Headers */,
 				3890AA4A142326D500067337 /* hangul.h in Headers */,
+				38B4A81914AB3F19003E6CEE /* hangulinternals.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

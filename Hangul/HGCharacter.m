@@ -7,6 +7,7 @@
 //
 
 #import "HGCharacter.h"
+#include <Hangul/hangulinternals.h>
 
 inline BOOL HGCharacterIsChoseong(HGUCSChar character) {
     return (BOOL)hangul_is_choseong(character);
