@@ -45,7 +45,7 @@
 		3890A8C61423247C00067337 /* hangul-gettext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hangul-gettext.h"; sourceTree = "<group>"; };
 		3890A8C71423247C00067337 /* hangul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangul.h; sourceTree = "<group>"; };
 		3890A8C81423247C00067337 /* hangulctype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hangulctype.c; sourceTree = "<group>"; };
-		3890A8C91423247C00067337 /* hangulinputcontext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hangulinputcontext.c; sourceTree = "<group>"; };
+		3890A8C91423247C00067337 /* hangulinputcontext.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; path = hangulinputcontext.c; sourceTree = "<group>"; };
 		3890A8CA1423247C00067337 /* hangulinternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangulinternals.h; sourceTree = "<group>"; };
 		3890A8CB1423247C00067337 /* hangulkeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangulkeyboard.h; sourceTree = "<group>"; };
 		3890A8CC1423247C00067337 /* hanja.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hanja.c; sourceTree = "<group>"; };
