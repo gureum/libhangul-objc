@@ -12,15 +12,15 @@
 #define DEBUG_HANGUL FALSE
 
 @implementation HGKeyboard 
-@synthesize data;
+@synthesize data=_data;
 
 //! @ref hangul_keyboard_new
 - (id)init {
     self = [super init];
     if (self) {
-        self->data = hangul_keyboard_new();
+        self->_data = hangul_keyboard_new();
         // 생성 실패 처리
-        if (self->data == NULL) {
+        if (self->_data == NULL) {
             [self release];
             return nil;
         }
@@ -32,7 +32,7 @@
 - (id)initWithKeyboardData:(HangulKeyboard *)keyboardData freeWhenDone:(BOOL)freeWhenDone {
     self = [super init];
     if (self) {
-        self->data = keyboardData;
+        self->_data = keyboardData;
         self->flags.freeWhenDone = freeWhenDone;
     }
     return self;
@@ -44,31 +44,31 @@
 
 - (void)dealloc {
     if (self->flags.freeWhenDone) {
-        hangul_keyboard_delete(self->data);
+        hangul_keyboard_delete(self->_data);
     }
     [super dealloc];
 }
 
 - (void)setValue:(HGUCSChar)value forKey:(int)key {
-    hangul_keyboard_set_value(self->data, key, value);
+    hangul_keyboard_set_value(self->_data, key, value);
 }
 
 - (void)setType:(int)type {
-    hangul_keyboard_set_type(self->data, type);
+    hangul_keyboard_set_type(self->_data, type);
 }
 
 @end
 
 @implementation HGInputContext
-@synthesize context;
+@synthesize context=_context;
 
 - (id)initWithKeyboardIdentifier:(NSString *)code
 {
     self = [super init];
     if (self) {
-        self->context = hangul_ic_new([code UTF8String]);
+        self->_context = hangul_ic_new([code UTF8String]);
         // 생성 실패 처리
-        if (self->context == NULL) {
+        if (self->_context == NULL) {
             [self release];
             self = nil;
         }
@@ -78,90 +78,90 @@
 
 - (void)dealloc
 {
-    hangul_ic_delete(self->context);
+    hangul_ic_delete(self->_context);
     [super dealloc];
 }
 
 - (BOOL)process:(int)ascii {
-    return (BOOL)hangul_ic_process(self->context, ascii);
+    return (BOOL)hangul_ic_process(self->_context, ascii);
 }
 
 - (void)reset {
-    hangul_ic_reset(self->context);
+    hangul_ic_reset(self->_context);
 }
 
 - (BOOL)backspace {
-    return (BOOL)hangul_ic_backspace(self->context);
+    return (BOOL)hangul_ic_backspace(self->_context);
 }
 
 - (BOOL)isEmpty {
-    return (BOOL)hangul_ic_is_empty(self->context);
+    return (BOOL)hangul_ic_is_empty(self->_context);
 }
 
 - (BOOL)hasChoseong {
-    return (BOOL)hangul_ic_has_choseong(self->context);
+    return (BOOL)hangul_ic_has_choseong(self->_context);
 }
 
 - (BOOL)hasJungseong {
-    return (BOOL)hangul_ic_has_jungseong(self->context);
+    return (BOOL)hangul_ic_has_jungseong(self->_context);
 }
 
 - (BOOL)hasJongseong {
-    return (BOOL)hangul_ic_has_jongseong(self->context);
+    return (BOOL)hangul_ic_has_jongseong(self->_context);
 }
 
 - (BOOL)isTransliteration {
-    return (BOOL)hangul_ic_is_transliteration(self->context);
+    return (BOOL)hangul_ic_is_transliteration(self->_context);
 }
 
 - (NSString *)preeditString {
-    NSString *string = [NSString stringWithUCSString:hangul_ic_get_preedit_string(self->context)];
+    NSString *string = [NSString stringWithUCSString:hangul_ic_get_preedit_string(self->_context)];
     ICLog(DEBUG_HANGUL, @"** HGInputContext -preeditString : %@", string);
     return string;
 }
 
 - (const HGUCSChar *)preeditUCSString {
-    return hangul_ic_get_preedit_string(self->context);
+    return hangul_ic_get_preedit_string(self->_context);
 }
 
 - (NSString *)commitString {
-    NSString *string = [NSString stringWithUCSString:hangul_ic_get_commit_string(self->context)];
+    NSString *string = [NSString stringWithUCSString:hangul_ic_get_commit_string(self->_context)];
     ICLog(DEBUG_HANGUL, @"** HGInputContext -commitString : %@", string);
     return string;
 }
 
 - (const HGUCSChar *)commitUCSString {
-    return hangul_ic_get_commit_string(self->context);
+    return hangul_ic_get_commit_string(self->_context);
 }
 
 - (NSString *)flushString {
-    NSString *string = [NSString stringWithUCSString:hangul_ic_flush(self->context)];
+    NSString *string = [NSString stringWithUCSString:hangul_ic_flush(self->_context)];
     ICLog(DEBUG_HANGUL, @"** HGInputContext -flushString : %@", string);
     return string;
 }
 
 - (const HGUCSChar *)flushUCSString {
-    return hangul_ic_flush(self->context);
+    return hangul_ic_flush(self->_context);
 }
 
 - (void)setOutputMode:(HGOutputMode)mode {
-    hangul_ic_set_output_mode(self->context, mode);
+    hangul_ic_set_output_mode(self->_context, mode);
 }
 
 - (void)setKeyboard:(HGKeyboard *)aKeyboard {
-    hangul_ic_set_keyboard(self->context, aKeyboard.data);
+    hangul_ic_set_keyboard(self->_context, aKeyboard.data);
 }
 
 - (void)setKeyboardWithData:(HangulKeyboard *)keyboardData {
-    hangul_ic_set_keyboard(self->context, keyboardData);
+    hangul_ic_set_keyboard(self->_context, keyboardData);
 }
 
 - (void)setKeyboardWithIdentifier:(NSString *)identifier {
-    hangul_ic_select_keyboard(self->context, [identifier UTF8String]);
+    hangul_ic_select_keyboard(self->_context, [identifier UTF8String]);
 }
 
 - (void)setCombination:(HangulCombination *)aCombination {
-    hangul_ic_set_combination(self->context, aCombination);
+    hangul_ic_set_combination(self->_context, aCombination);
 }
 
 @end

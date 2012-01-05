@@ -25,8 +25,6 @@
 */
 @interface HGKeyboard : NSObject {
 @private
-    HangulKeyboard *data;
-    
     struct {
         unsigned freeWhenDone:1;
     } flags;
@@ -61,10 +59,7 @@ typedef enum {
  
     @ref HangulInputContext 의 기능에 대한 Objective-C의 객체 모델을 제공한다. 객체 모델이 지원하지 않는 기능에 대해서는 -context 로 libhangul의 컨텍스트에 직접 접근하여 사용할 수 있다.
 */
-@interface HGInputContext : NSObject {
-@private
-    HangulInputContext *context;
-}
+@interface HGInputContext : NSObject
 
 //! @brief  미구현 기능을 이용하기 위해 HangulInputContext 에 직접 접근
 @property(nonatomic, readonly) HangulInputContext *context;
