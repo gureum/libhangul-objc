@@ -21,7 +21,9 @@
  
  Hanja 구조체에서 key, value, comment를 가져오는 인터페이스를 제공한다.
  */
-@interface HGHanja : NSObject
+@interface HGHanja : NSObject {
+    const Hanja *_cHanja;
+}
 
 @property(nonatomic, readonly) const Hanja *cHanja;
 @property(nonatomic, readonly) NSString *key, *value, *comment;
@@ -33,7 +35,10 @@
  
  HanjaList 구조체에서 count, key를 가져오는 인터페이스와 NSArray 변환을 제공한다.
  */
-@interface HGHanjaList : NSObject<NSFastEnumeration>
+@interface HGHanjaList : NSObject<NSFastEnumeration> {
+    HanjaList *_cList;
+    NSArray *_array;
+}
 
 @property(nonatomic, readonly) HanjaList *cList;
 @property(nonatomic, readonly) NSArray *array;
@@ -50,7 +55,9 @@
  HanjaTable 의 load와 검색 인터페이스를 제공한다.
  파일을 지정하지 않고 생성할 경우 libhangul에 내장 된 기본 사전을 불러온다.
  */
-@interface HGHanjaTable : NSObject
+@interface HGHanjaTable : NSObject {
+    HanjaTable *_cTable;
+}
 
 @property(nonatomic, readonly) HanjaTable *cTable;
 
