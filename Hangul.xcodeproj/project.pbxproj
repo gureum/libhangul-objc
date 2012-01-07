@@ -8,19 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3810007714B47A80004224DE /* HGHanja.h in Headers */ = {isa = PBXBuildFile; fileRef = 3810007514B47A7F004224DE /* HGHanja.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3810007814B47A80004224DE /* HGHanja.h in Headers */ = {isa = PBXBuildFile; fileRef = 3810007514B47A7F004224DE /* HGHanja.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3810007914B47A80004224DE /* HGHanja.m in Sources */ = {isa = PBXBuildFile; fileRef = 3810007614B47A80004224DE /* HGHanja.m */; };
 		3810007A14B47A80004224DE /* HGHanja.m in Sources */ = {isa = PBXBuildFile; fileRef = 3810007614B47A80004224DE /* HGHanja.m */; };
-		3810008E14B53252004224DE /* Hangul.h in Headers */ = {isa = PBXBuildFile; fileRef = 3810008D14B53252004224DE /* Hangul.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3810008F14B53252004224DE /* Hangul.h in Headers */ = {isa = PBXBuildFile; fileRef = 3810008D14B53252004224DE /* Hangul.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3810009014B5327F004224DE /* HGCharacter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8B11423238E00067337 /* HGCharacter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3810009114B5327F004224DE /* HGInputContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8B31423238E00067337 /* HGInputContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		381000A514B70E96004224DE /* all.txt in Resources */ = {isa = PBXBuildFile; fileRef = 381000A214B70E96004224DE /* all.txt */; };
 		3890A8B51423238F00067337 /* HGCharacter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8B11423238E00067337 /* HGCharacter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3890A8B61423238F00067337 /* HGCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8B21423238E00067337 /* HGCharacter.m */; };
 		3890A8B71423238F00067337 /* HGInputContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8B31423238E00067337 /* HGInputContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3890A8B81423238F00067337 /* HGInputContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8B41423238E00067337 /* HGInputContext.m */; };
-		3890A8CF1423247C00067337 /* hangul.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8C71423247C00067337 /* hangul.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3890A8CF1423247C00067337 /* hangul.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8C71423247C00067337 /* hangul.h */; settings = {ATTRIBUTES = (); }; };
 		3890A8D01423247C00067337 /* hangulctype.c in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8C81423247C00067337 /* hangulctype.c */; };
 		3890A8D11423247C00067337 /* hangulinputcontext.c in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8C91423247C00067337 /* hangulinputcontext.c */; };
 		3890A8D21423247C00067337 /* hangulinternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8CA1423247C00067337 /* hangulinternals.h */; };
@@ -34,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3890A8EB1423259200067337 /* PBXContainerItemProxy */ = {
+		380E1C7914B832D300289EE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38FA21E21423219E00444D67 /* Project object */;
 			proxyType = 1;
@@ -180,10 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3890A8CF1423247C00067337 /* hangul.h in Headers */,
-				3810009014B5327F004224DE /* HGCharacter.h in Headers */,
-				3810009114B5327F004224DE /* HGInputContext.h in Headers */,
-				3810007814B47A80004224DE /* HGHanja.h in Headers */,
-				3810008F14B53252004224DE /* Hangul.h in Headers */,
 				3890A8D21423247C00067337 /* hangulinternals.h in Headers */,
 				3890A8D31423247C00067337 /* hangulkeyboard.h in Headers */,
 			);
@@ -193,11 +184,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3890AA4A142326D500067337 /* hangul.h in Headers */,
 				3890A8B51423238F00067337 /* HGCharacter.h in Headers */,
 				3890A8B71423238F00067337 /* HGInputContext.h in Headers */,
 				3810007714B47A80004224DE /* HGHanja.h in Headers */,
-				3810008E14B53252004224DE /* Hangul.h in Headers */,
+				3890AA4A142326D500067337 /* hangul.h in Headers */,
 				38B4A81914AB3F19003E6CEE /* hangulinternals.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,7 +224,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3890A8EC1423259200067337 /* PBXTargetDependency */,
+				380E1C7A14B832D300289EE7 /* PBXTargetDependency */,
 			);
 			name = Hangul;
 			productName = Hangul;
@@ -305,10 +295,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3890A8EC1423259200067337 /* PBXTargetDependency */ = {
+		380E1C7A14B832D300289EE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3890A8BD1423245500067337 /* hangul */;
-			targetProxy = 3890A8EB1423259200067337 /* PBXContainerItemProxy */;
+			targetProxy = 380E1C7914B832D300289EE7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -365,6 +355,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -379,6 +370,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
