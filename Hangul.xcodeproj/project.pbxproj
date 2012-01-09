@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3810007714B47A80004224DE /* HGHanja.h in Headers */ = {isa = PBXBuildFile; fileRef = 3810007514B47A7F004224DE /* HGHanja.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3810007914B47A80004224DE /* HGHanja.m in Sources */ = {isa = PBXBuildFile; fileRef = 3810007614B47A80004224DE /* HGHanja.m */; };
+		3810007A14B47A80004224DE /* HGHanja.m in Sources */ = {isa = PBXBuildFile; fileRef = 3810007614B47A80004224DE /* HGHanja.m */; };
+		381000A514B70E96004224DE /* all.txt in Resources */ = {isa = PBXBuildFile; fileRef = 381000A214B70E96004224DE /* all.txt */; };
 		3890A8B51423238F00067337 /* HGCharacter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8B11423238E00067337 /* HGCharacter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3890A8B61423238F00067337 /* HGCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8B21423238E00067337 /* HGCharacter.m */; };
 		3890A8B71423238F00067337 /* HGInputContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8B31423238E00067337 /* HGInputContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3890A8B81423238F00067337 /* HGInputContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8B41423238E00067337 /* HGInputContext.m */; };
-		3890A8CE1423247C00067337 /* hangul-gettext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8C61423247C00067337 /* hangul-gettext.h */; };
 		3890A8CF1423247C00067337 /* hangul.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8C71423247C00067337 /* hangul.h */; settings = {ATTRIBUTES = (); }; };
 		3890A8D01423247C00067337 /* hangulctype.c in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8C81423247C00067337 /* hangulctype.c */; };
 		3890A8D11423247C00067337 /* hangulinputcontext.c in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8C91423247C00067337 /* hangulinputcontext.c */; };
 		3890A8D21423247C00067337 /* hangulinternals.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8CA1423247C00067337 /* hangulinternals.h */; };
 		3890A8D31423247C00067337 /* hangulkeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8CB1423247C00067337 /* hangulkeyboard.h */; };
 		3890A8D41423247C00067337 /* hanja.c in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8CC1423247C00067337 /* hanja.c */; };
-		3890A8D51423247C00067337 /* hanjacompatible.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8CD1423247C00067337 /* hanjacompatible.h */; };
 		3890A8ED1423259600067337 /* libhangul.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3890A8BE1423245500067337 /* libhangul.a */; };
 		3890A8EE142325A400067337 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA21F41423219E00444D67 /* Foundation.framework */; };
 		3890AA4A142326D500067337 /* hangul.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8C71423247C00067337 /* hangul.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3890A8EB1423259200067337 /* PBXContainerItemProxy */ = {
+		380E1C7914B832D300289EE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38FA21E21423219E00444D67 /* Project object */;
 			proxyType = 1;
@@ -37,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3810007514B47A7F004224DE /* HGHanja.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGHanja.h; sourceTree = "<group>"; };
+		3810007614B47A80004224DE /* HGHanja.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGHanja.m; sourceTree = "<group>"; };
+		3810008114B4A1AB004224DE /* hanja.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hanja.txt; path = hanja/hanja.txt; sourceTree = "<group>"; };
+		3810008D14B53252004224DE /* Hangul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hangul.h; sourceTree = "<group>"; };
+		381000A214B70E96004224DE /* all.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = all.txt; path = hanja/all.txt; sourceTree = "<group>"; };
+		381000A314B70E96004224DE /* hanjar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hanjar.txt; path = hanja/hanjar.txt; sourceTree = "<group>"; };
+		381000A414B70E96004224DE /* mssymbol.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mssymbol.txt; path = hanja/mssymbol.txt; sourceTree = "<group>"; };
 		3890A8B11423238E00067337 /* HGCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGCharacter.h; sourceTree = "<group>"; };
 		3890A8B21423238E00067337 /* HGCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGCharacter.m; sourceTree = "<group>"; };
 		3890A8B31423238E00067337 /* HGInputContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGInputContext.h; sourceTree = "<group>"; };
@@ -77,6 +86,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3810007C14B4A1AA004224DE /* data */ = {
+			isa = PBXGroup;
+			children = (
+				381000A214B70E96004224DE /* all.txt */,
+				381000A414B70E96004224DE /* mssymbol.txt */,
+				3810008114B4A1AB004224DE /* hanja.txt */,
+				381000A314B70E96004224DE /* hanjar.txt */,
+			);
+			name = data;
+			path = libhangul/data;
+			sourceTree = "<group>";
+		};
 		3890A8C41423247C00067337 /* hangul */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +119,7 @@
 			children = (
 				38FA21F51423219E00444D67 /* Hangul */,
 				3890A8C41423247C00067337 /* hangul */,
+				3810007C14B4A1AA004224DE /* data */,
 				38FA21EE1423219E00444D67 /* Frameworks */,
 				38FA21ED1423219E00444D67 /* Products */,
 			);
@@ -127,6 +149,8 @@
 				3890A8B21423238E00067337 /* HGCharacter.m */,
 				3890A8B31423238E00067337 /* HGInputContext.h */,
 				3890A8B41423238E00067337 /* HGInputContext.m */,
+				3810007514B47A7F004224DE /* HGHanja.h */,
+				3810007614B47A80004224DE /* HGHanja.m */,
 				38FA21F61423219E00444D67 /* Supporting Files */,
 			);
 			path = Hangul;
@@ -138,6 +162,7 @@
 				38FA21F71423219E00444D67 /* Info.plist */,
 				38FA21F81423219E00444D67 /* InfoPlist.strings */,
 				38FA21FB1423219E00444D67 /* Prefix.pch */,
+				3810008D14B53252004224DE /* Hangul.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,10 +175,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3890A8CF1423247C00067337 /* hangul.h in Headers */,
-				3890A8CE1423247C00067337 /* hangul-gettext.h in Headers */,
 				3890A8D21423247C00067337 /* hangulinternals.h in Headers */,
 				3890A8D31423247C00067337 /* hangulkeyboard.h in Headers */,
-				3890A8D51423247C00067337 /* hanjacompatible.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +186,7 @@
 			files = (
 				3890A8B51423238F00067337 /* HGCharacter.h in Headers */,
 				3890A8B71423238F00067337 /* HGInputContext.h in Headers */,
+				3810007714B47A80004224DE /* HGHanja.h in Headers */,
 				3890AA4A142326D500067337 /* hangul.h in Headers */,
 				38B4A81914AB3F19003E6CEE /* hangulinternals.h in Headers */,
 			);
@@ -200,7 +224,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3890A8EC1423259200067337 /* PBXTargetDependency */,
+				380E1C7A14B832D300289EE7 /* PBXTargetDependency */,
 			);
 			name = Hangul;
 			productName = Hangul;
@@ -214,6 +238,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = youknowone.org;
 			};
 			buildConfigurationList = 38FA21E51423219E00444D67 /* Build configuration list for PBXProject "Hangul" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -239,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38FA21FA1423219E00444D67 /* InfoPlist.strings in Resources */,
+				381000A514B70E96004224DE /* all.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +278,7 @@
 				3890A8D01423247C00067337 /* hangulctype.c in Sources */,
 				3890A8D11423247C00067337 /* hangulinputcontext.c in Sources */,
 				3890A8D41423247C00067337 /* hanja.c in Sources */,
+				3810007A14B47A80004224DE /* HGHanja.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,16 +288,17 @@
 			files = (
 				3890A8B61423238F00067337 /* HGCharacter.m in Sources */,
 				3890A8B81423238F00067337 /* HGInputContext.m in Sources */,
+				3810007914B47A80004224DE /* HGHanja.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3890A8EC1423259200067337 /* PBXTargetDependency */ = {
+		380E1C7A14B832D300289EE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3890A8BD1423245500067337 /* hangul */;
-			targetProxy = 3890A8EB1423259200067337 /* PBXContainerItemProxy */;
+			targetProxy = 380E1C7914B832D300289EE7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -327,6 +355,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -341,6 +370,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -356,6 +386,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Hangul/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "LIBHANGUL_DEFAULT_HANJA_DIC=\\\"@loader_path/../Frameworks/Hangul/Dictionary\\\"";
 				INFOPLIST_FILE = Hangul/Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,6 +406,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Hangul/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "LIBHANGUL_DEFAULT_HANJA_DIC=\\\"@loader_path/../Frameworks/Hangul/Dictionary\\\"";
 				INFOPLIST_FILE = Hangul/Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

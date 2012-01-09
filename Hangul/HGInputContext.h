@@ -24,9 +24,7 @@
     @ref HGInputContext 를 위해 새 데이터를 만들때는 -init 을, 원래의 HangulKeyboard 데이터를 변환하기 위해서는 -initWithKeyboardData:freeWhenDone: 과 -keyboardWithKeyboardData:freeWhenDone: 을 사용한다.
 */
 @interface HGKeyboard : NSObject {
-@private
-    HangulKeyboard *data;
-    
+    HangulKeyboard *_data;
     struct {
         unsigned freeWhenDone:1;
     } flags;
@@ -62,8 +60,7 @@ typedef enum {
     @ref HangulInputContext 의 기능에 대한 Objective-C의 객체 모델을 제공한다. 객체 모델이 지원하지 않는 기능에 대해서는 -context 로 libhangul의 컨텍스트에 직접 접근하여 사용할 수 있다.
 */
 @interface HGInputContext : NSObject {
-@private
-    HangulInputContext *context;
+    HangulInputContext *_context;
 }
 
 //! @brief  미구현 기능을 이용하기 위해 HangulInputContext 에 직접 접근
