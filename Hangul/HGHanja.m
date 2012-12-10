@@ -38,7 +38,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"<%s('%s':'%@')('%@')>", class_getName([self class]), self.key, self.value, self.comment];
+    return [NSString stringWithFormat:@"<%@('%@':'%@')('%@')>", self.className, self.key, self.value, self.comment];
 }
 
 #pragma mark 
