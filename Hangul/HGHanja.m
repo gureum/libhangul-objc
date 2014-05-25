@@ -100,6 +100,10 @@
     return [HGHanjaList listWithCHanjaList:hanja_table_match_suffix(self->_cTable, key.UTF8String)];
 }
 
+- (HGHanjaList *)hanjasByPrefixSearching:(NSString *)key {
+    return [HGHanjaList listWithCHanjaList:hanja_table_search_prefix(self->_cTable, key.UTF8String)];
+}
+
 @end
 
 @implementation HGHanjaList
@@ -136,8 +140,8 @@
     return [[[NSString alloc] initWithBytesNoCopy:(void *)key length:strlen(key) encoding:NSUTF8StringEncoding freeWhenDone:NO] autorelease];
 }
 
-- (HGHanja *)hanjaAtIndex:(NSInteger)index {
-    const Hanja *cHanja = hanja_list_get_nth(self->_cList, index);
+- (HGHanja *)hanjaAtIndex:(NSUInteger)index {
+    const Hanja *cHanja = hanja_list_get_nth(self->_cList, (unsigned)index);
     return [HGHanja hanjaWithCHanja:cHanja];
 }
 
@@ -167,7 +171,7 @@
     if (state->state < listCount) {
         state->itemsPtr = buffer;
         while ((state->state < listCount) && (count < len)) {
-            const Hanja *cHanja = hanja_list_get_nth(self->_cList, state->state);
+            const Hanja *cHanja = hanja_list_get_nth(self->_cList, (unsigned)state->state);
             buffer[count] = [HGHanja hanjaWithCHanja:cHanja];
             state->state += 1;
             count += 1;
