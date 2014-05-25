@@ -45,7 +45,7 @@
 @property(nonatomic, readonly) NSInteger count;
 @property(nonatomic, readonly) NSString *key;
 
-- (HGHanja *)hanjaAtIndex:(NSInteger)index;
+- (HGHanja *)hanjaAtIndex:(NSUInteger)index;
 
 @end
 
@@ -66,5 +66,6 @@
 - (HGHanjaList *)hanjasByExactMatching:(NSString *)key;
 - (HGHanjaList *)hanjasByPrefixMatching:(NSString *)key;
 - (HGHanjaList *)hanjasBySuffixMatching:(NSString *)key;
+- (HGHanjaList *)hanjasByPrefixSearching:(NSString *)key;
 
 @end

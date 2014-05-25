@@ -10,7 +10,13 @@
 		3810007714B47A80004224DE /* HGHanja.h in Headers */ = {isa = PBXBuildFile; fileRef = 3810007514B47A7F004224DE /* HGHanja.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3810007914B47A80004224DE /* HGHanja.m in Sources */ = {isa = PBXBuildFile; fileRef = 3810007614B47A80004224DE /* HGHanja.m */; };
 		3810007A14B47A80004224DE /* HGHanja.m in Sources */ = {isa = PBXBuildFile; fileRef = 3810007614B47A80004224DE /* HGHanja.m */; };
-		381000A514B70E96004224DE /* all.txt in Resources */ = {isa = PBXBuildFile; fileRef = 381000A214B70E96004224DE /* all.txt */; };
+		3879B5AF1932528200DB574D /* hanjac.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3879B5AD1932528200DB574D /* hanjac.txt */; };
+		3879B5B01932528200DB574D /* hanjaw.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3879B5AE1932528200DB574D /* hanjaw.txt */; };
+		387F957719325368004A7268 /* mssymbol.txt in Resources */ = {isa = PBXBuildFile; fileRef = 381000A414B70E96004224DE /* mssymbol.txt */; };
+		387F957819325383004A7268 /* hanjar.txt in Resources */ = {isa = PBXBuildFile; fileRef = 381000A314B70E96004224DE /* hanjar.txt */; };
+		387F95791932541A004A7268 /* all.txt in Resources */ = {isa = PBXBuildFile; fileRef = 381000A214B70E96004224DE /* all.txt */; };
+		387F958219327948004A7268 /* emoticon.txt in Resources */ = {isa = PBXBuildFile; fileRef = 387F958019327948004A7268 /* emoticon.txt */; };
+		387F958319327948004A7268 /* emoticonr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 387F958119327948004A7268 /* emoticonr.txt */; };
 		3890A8B51423238F00067337 /* HGCharacter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8B11423238E00067337 /* HGCharacter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3890A8B61423238F00067337 /* HGCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3890A8B21423238E00067337 /* HGCharacter.m */; };
 		3890A8B71423238F00067337 /* HGInputContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8B31423238E00067337 /* HGInputContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +52,10 @@
 		381000A214B70E96004224DE /* all.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = all.txt; path = hanja/all.txt; sourceTree = "<group>"; };
 		381000A314B70E96004224DE /* hanjar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hanjar.txt; path = hanja/hanjar.txt; sourceTree = "<group>"; };
 		381000A414B70E96004224DE /* mssymbol.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mssymbol.txt; path = hanja/mssymbol.txt; sourceTree = "<group>"; };
+		3879B5AD1932528200DB574D /* hanjac.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hanjac.txt; path = hanja/hanjac.txt; sourceTree = "<group>"; };
+		3879B5AE1932528200DB574D /* hanjaw.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hanjaw.txt; path = hanja/hanjaw.txt; sourceTree = "<group>"; };
+		387F958019327948004A7268 /* emoticon.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = emoticon.txt; path = hanja/emoticon.txt; sourceTree = "<group>"; };
+		387F958119327948004A7268 /* emoticonr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = emoticonr.txt; path = hanja/emoticonr.txt; sourceTree = "<group>"; };
 		3890A8B11423238E00067337 /* HGCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGCharacter.h; sourceTree = "<group>"; };
 		3890A8B21423238E00067337 /* HGCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGCharacter.m; sourceTree = "<group>"; };
 		3890A8B31423238E00067337 /* HGInputContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGInputContext.h; sourceTree = "<group>"; };
@@ -57,7 +67,7 @@
 		3890A8C91423247C00067337 /* hangulinputcontext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hangulinputcontext.c; sourceTree = "<group>"; };
 		3890A8CA1423247C00067337 /* hangulinternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangulinternals.h; sourceTree = "<group>"; };
 		3890A8CB1423247C00067337 /* hangulkeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangulkeyboard.h; sourceTree = "<group>"; };
-		3890A8CC1423247C00067337 /* hanja.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hanja.c; sourceTree = "<group>"; };
+		3890A8CC1423247C00067337 /* hanja.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hanja.c; sourceTree = "<group>"; tabWidth = 8; };
 		3890A8CD1423247C00067337 /* hanjacompatible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hanjacompatible.h; sourceTree = "<group>"; };
 		38FA21EC1423219E00444D67 /* Hangul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hangul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FA21F41423219E00444D67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,6 +103,10 @@
 				381000A414B70E96004224DE /* mssymbol.txt */,
 				3810008114B4A1AB004224DE /* hanja.txt */,
 				381000A314B70E96004224DE /* hanjar.txt */,
+				3879B5AD1932528200DB574D /* hanjac.txt */,
+				3879B5AE1932528200DB574D /* hanjaw.txt */,
+				387F958019327948004A7268 /* emoticon.txt */,
+				387F958119327948004A7268 /* emoticonr.txt */,
 			);
 			name = data;
 			path = libhangul/data;
@@ -237,7 +251,7 @@
 		38FA21E21423219E00444D67 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = youknowone.org;
 			};
 			buildConfigurationList = 38FA21E51423219E00444D67 /* Build configuration list for PBXProject "Hangul" */;
@@ -264,7 +278,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				38FA21FA1423219E00444D67 /* InfoPlist.strings in Resources */,
-				381000A514B70E96004224DE /* all.txt in Resources */,
+				387F95791932541A004A7268 /* all.txt in Resources */,
+				3879B5B01932528200DB574D /* hanjaw.txt in Resources */,
+				387F958319327948004A7268 /* emoticonr.txt in Resources */,
+				3879B5AF1932528200DB574D /* hanjac.txt in Resources */,
+				387F958219327948004A7268 /* emoticon.txt in Resources */,
+				387F957719325368004A7268 /* mssymbol.txt in Resources */,
+				387F957819325383004A7268 /* hanjar.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +376,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "LIBHANGUL_DEFAULT_HANJA_DIC=\\\"/Library/Frameworks/Hangul/Dictionary\\\"";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -374,10 +395,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Developer ID Application: YunWon Jeong (RT8F3G27W8)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "LIBHANGUL_DEFAULT_HANJA_DIC=\\\"/Library/Frameworks/Hangul/Dictionary\\\"";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
