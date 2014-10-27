@@ -109,11 +109,11 @@ inline NSInteger HGGetSyllablesFromJamos(const HGUCSChar* jamos, NSInteger jamos
 }
 
 + (id)stringWithUCSString:(const HGUCSChar *)ucsString {
-    return [[[self alloc] initWithUCSString:ucsString] autorelease];
+    return [[self alloc] initWithUCSString:ucsString];
 }
 
 + (id)stringWithUCSString:(const HGUCSChar *)ucsString length:(NSUInteger)length {
-    return [[[self alloc] initWithUCSString:ucsString length:length] autorelease];
+    return [[self alloc] initWithUCSString:ucsString length:length];
 }
 
 @end

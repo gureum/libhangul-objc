@@ -42,7 +42,7 @@
 
 @property(nonatomic, readonly) HanjaList *cList;
 @property(nonatomic, readonly) NSArray *array;
-@property(nonatomic, readonly) NSInteger count;
+@property(nonatomic, readonly) NSUInteger count;
 @property(nonatomic, readonly) NSString *key;
 
 - (HGHanja *)hanjaAtIndex:(NSUInteger)index;
@@ -56,6 +56,7 @@
  파일을 지정하지 않고 생성할 경우 libhangul에 내장 된 기본 사전을 불러온다.
  */
 @interface HGHanjaTable : NSObject {
+    NSString *_path;
     HanjaTable *_cTable;
 }
 

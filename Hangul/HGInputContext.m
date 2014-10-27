@@ -21,7 +21,6 @@
         self->_data = hangul_keyboard_new();
         // 생성 실패 처리
         if (self->_data == NULL) {
-            [self release];
             return nil;
         }
         self->flags.freeWhenDone = NO;
@@ -39,14 +38,13 @@
 }
 
 + (id)keyboardWithKeyboardData:(HangulKeyboard *)keyboardData freeWhenDone:(BOOL)YesOrNo {
-    return [[[self alloc] initWithKeyboardData:keyboardData freeWhenDone:YesOrNo] autorelease];
+    return [[self alloc] initWithKeyboardData:keyboardData freeWhenDone:YesOrNo];
 }
 
 - (void)dealloc {
     if (self->flags.freeWhenDone) {
         hangul_keyboard_delete(self->_data);
     }
-    [super dealloc];
 }
 
 - (void)setValue:(HGUCSChar)value forKey:(int)key {
@@ -62,24 +60,20 @@
 @implementation HGInputContext
 @synthesize context=_context;
 
-- (id)initWithKeyboardIdentifier:(NSString *)code
-{
+- (id)initWithKeyboardIdentifier:(NSString *)code {
     self = [super init];
     if (self) {
         self->_context = hangul_ic_new([code UTF8String]);
         // 생성 실패 처리
         if (self->_context == NULL) {
-            [self release];
             self = nil;
         }
     }
     return self;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
     hangul_ic_delete(self->_context);
-    [super dealloc];
 }
 
 - (BOOL)process:(int)ascii {
