@@ -17,6 +17,7 @@
 #import <Hangul/HGCharacter.h>
 
 @class HGHangulCombination;
+@class HGHangulConversion;
 
 /*!
     @brief  @ref HangulKeyboard 를 감싼다.
