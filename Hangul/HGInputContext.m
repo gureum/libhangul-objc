@@ -55,6 +55,10 @@
     hangul_keyboard_set_type(self->_data, type);
 }
 
+- (BOOL)moeum_wo_conversion:(int)ascii {
+	moeum_wo_conversion(self->_data, ascii);
+}
+
 @end
 
 @implementation HGInputContext

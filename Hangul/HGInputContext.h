@@ -17,6 +17,7 @@
 #import <Hangul/HGCharacter.h>
 
 @class HGHangulCombination;
+@class HGHangulConversion;
 
 /*!
     @brief  @ref HangulKeyboard 를 감싼다.
@@ -43,6 +44,8 @@
 - (void)setValue:(HGUCSChar)value forKey:(int)key;
 //! @brief @ref hangul_keyboard_set_type
 - (void)setType:(int)type;
+//! @brief @ref moeum_wo_conversion
+- (BOOL)moeum_wo_conversion:(int)ascii;
 
 @end
 
