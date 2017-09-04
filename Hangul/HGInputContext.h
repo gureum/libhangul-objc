@@ -39,8 +39,6 @@
 //! @brief  HangulKeyboard 데이터를 기반으로 객체 생성
 + (id)keyboardWithKeyboardData:(HangulKeyboard *)data freeWhenDone:(BOOL)YesOrNo;
 
-//! @brief @ref hangul_keyboard_set_value
-- (void)setValue:(HGUCSChar)value forKey:(int)key;
 //! @brief @ref hangul_keyboard_set_type
 - (void)setType:(int)type;
 
@@ -114,8 +112,6 @@ typedef enum {
 - (void)setKeyboardWithData:(HangulKeyboard *)keyboardData;
 //! @brief  @ref hangul_ic_select_keyboard
 - (void)setKeyboardWithIdentifier:(NSString *)identifier;
-//! @brief  @ref hangul_ic_set_combination
-- (void)setCombination:(HangulCombination *)aCombination;
 
 /* out of use, out of mind
 void hangul_ic_connect_callback(HangulInputContext* hic, const char* event,
