@@ -70,8 +70,8 @@
 @synthesize cTable=_cTable;
 
 - (id)init {
-    NSBundle *bundle = [NSBundle bundleForClass:[HGHanjaTable class]];
-    return [self initWithContentOfFile:[bundle pathForResource:@"all" ofType:@"txt"]];
+    NSBundle *bundle = [NSBundle mainBundle];
+    return [self initWithContentOfFile:[bundle pathForResource:@"hanja" ofType:@"txt" inDirectory:@"hanja"]];
 }
 
 - (id)initWithContentOfFile:(NSString *)path {

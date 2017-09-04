@@ -11,8 +11,21 @@
 #define dlog(...)
 #define DEBUG_HANGUL FALSE
 
+const char *libhangul_data_dir() {
+    NSBundle *hangulBundle = [NSBundle mainBundle];
+    NSString *path = [hangulBundle resourcePath];
+    return path.fileSystemRepresentation;
+}
+
+
 @implementation HGKeyboard 
 @synthesize data=_data;
+
++ (void)initialize {
+    if (self == [HGKeyboard class]) {
+        hangul_init();
+    }
+}
 
 //! @ref hangul_keyboard_new
 - (id)init {
@@ -45,10 +58,6 @@
     if (self->flags.freeWhenDone) {
         hangul_keyboard_delete(self->_data);
     }
-}
-
-- (void)setValue:(HGUCSChar)value forKey:(int)key {
-    hangul_keyboard_set_value(self->_data, key, value);
 }
 
 - (void)setType:(int)type {
@@ -154,16 +163,12 @@
     hangul_ic_select_keyboard(self->_context, [identifier UTF8String]);
 }
 
-- (void)setCombination:(HangulCombination *)aCombination {
-    hangul_ic_set_combination(self->_context, aCombination);
-}
-
 @end
 
 inline NSString *HGKeyboardIdentifierAtIndex(NSUInteger index) {
-    return [NSString stringWithUTF8String:hangul_ic_get_keyboard_id((unsigned)index)];
+    return [NSString stringWithUTF8String:hangul_keyboard_list_get_keyboard_id((unsigned)index)];
 }
 
 inline NSString *HGKeyboardNameAtIndex(NSUInteger index) {
-    return [NSString stringWithUTF8String:hangul_ic_get_keyboard_name((unsigned)index)];
+    return [NSString stringWithUTF8String:hangul_keyboard_list_get_keyboard_name((unsigned)index)];
 }
