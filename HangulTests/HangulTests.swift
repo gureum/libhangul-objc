@@ -8,7 +8,7 @@
 
 import XCTest
 
-func ord(c: String) -> Int32 {
+func ord(_ c: String) -> Int32 {
     return Int32(c.unicodeScalars.first!.value)
 }
 

@@ -10,6 +10,8 @@
 		3810007714B47A80004224DE /* HGHanja.h in Headers */ = {isa = PBXBuildFile; fileRef = 3810007514B47A7F004224DE /* HGHanja.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3810007914B47A80004224DE /* HGHanja.m in Sources */ = {isa = PBXBuildFile; fileRef = 3810007614B47A80004224DE /* HGHanja.m */; };
 		3810007A14B47A80004224DE /* HGHanja.m in Sources */ = {isa = PBXBuildFile; fileRef = 3810007614B47A80004224DE /* HGHanja.m */; };
+		3810E7B91F5F2DA50005440A /* keyboards in Resources */ = {isa = PBXBuildFile; fileRef = 3810E7B81F5F2DA50005440A /* keyboards */; };
+		3810E7BA1F5F2DAA0005440A /* keyboards in Resources */ = {isa = PBXBuildFile; fileRef = 3810E7B81F5F2DA50005440A /* keyboards */; };
 		382707E71F573F1D00658B6B /* HangulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382707E61F573F1D00658B6B /* HangulTests.swift */; };
 		382707E91F573F1D00658B6B /* Hangul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA21EC1423219E00444D67 /* Hangul.framework */; };
 		387F957719325368004A7268 /* mssymbol.txt in Resources */ = {isa = PBXBuildFile; fileRef = 381000A414B70E96004224DE /* mssymbol.txt */; };
@@ -55,6 +57,7 @@
 		3810008114B4A1AB004224DE /* hanja.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hanja.txt; path = hanja/hanja.txt; sourceTree = "<group>"; };
 		3810008D14B53252004224DE /* Hangul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hangul.h; sourceTree = "<group>"; };
 		381000A414B70E96004224DE /* mssymbol.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mssymbol.txt; path = hanja/mssymbol.txt; sourceTree = "<group>"; };
+		3810E7B81F5F2DA50005440A /* keyboards */ = {isa = PBXFileReference; lastKnownFileType = folder; name = keyboards; path = ../../OSX/data/keyboards; sourceTree = "<group>"; };
 		382707E41F573F1D00658B6B /* HangulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		382707E61F573F1D00658B6B /* HangulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangulTests.swift; sourceTree = "<group>"; };
 		382707E81F573F1D00658B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 				382707E61F573F1D00658B6B /* HangulTests.swift */,
 				382707EF1F573FC800658B6B /* Bridge.h */,
 				382707E81F573F1D00658B6B /* Info.plist */,
+				3810E7B81F5F2DA50005440A /* keyboards */,
 			);
 			path = HangulTests;
 			sourceTree = "<group>";
@@ -292,13 +296,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = youknowone.org;
 				TargetAttributes = {
 					382707E31F573F1D00658B6B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9384JEL3M9;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+					};
+					38FA21EB1423219E00444D67 = {
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -326,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3810E7B91F5F2DA50005440A /* keyboards in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3810E7BA1F5F2DAA0005440A /* keyboards in Resources */,
 				38FA21FA1423219E00444D67 /* InfoPlist.strings in Resources */,
 				387F957719325368004A7268 /* mssymbol.txt in Resources */,
 			);
@@ -432,7 +442,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = HangulTests/Bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -465,7 +476,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = HangulTests/Bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -504,12 +516,18 @@
 		38FA21FC1423219E00444D67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -543,12 +561,18 @@
 		38FA21FD1423219E00444D67 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -572,6 +596,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -595,6 +620,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -620,6 +647,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

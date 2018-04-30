@@ -77,12 +77,12 @@ NSInteger HGGetSyllablesFromJamos(const HGUCSChar* jamos, NSInteger jamosLength,
 @interface NSString (HGUCS)
 
 //! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
-- (id)initWithUCSString:(const HGUCSChar *)ucsString;
+- (instancetype)initWithUCSString:(const HGUCSChar *)ucsString;
 //! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
-- (id)initWithUCSString:(const HGUCSChar *)ucsString length:(NSUInteger)length;
+- (instancetype)initWithUCSString:(const HGUCSChar *)ucsString length:(NSUInteger)length;
 //! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
-+ (id)stringWithUCSString:(const HGUCSChar *)ucsString;
++ (instancetype)stringWithUCSString:(const HGUCSChar *)ucsString;
 //! @brief  HGUCSChar 문자열로 NSString을 생성 (UTF-32LE)
-+ (id)stringWithUCSString:(const HGUCSChar *)ucsString length:(NSUInteger)length;
++ (instancetype)stringWithUCSString:(const HGUCSChar *)ucsString length:(NSUInteger)length;
 
 @end
