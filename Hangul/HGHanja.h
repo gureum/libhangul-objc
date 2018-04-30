@@ -62,7 +62,7 @@
 
 @property(nonatomic, readonly) HanjaTable *cTable;
 
-- (id)initWithContentOfFile:(NSString *)path;
+- (instancetype)initWithContentOfFile:(NSString *)path NS_DESIGNATED_INITIALIZER;
 
 - (HGHanjaList *)hanjasByExactMatching:(NSString *)key;
 - (HGHanjaList *)hanjasByPrefixMatching:(NSString *)key;

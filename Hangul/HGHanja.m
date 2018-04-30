@@ -21,7 +21,7 @@
 @implementation HGHanja
 @synthesize cHanja=_cHanja;
 
-- (id)initWithCHanja:(const Hanja *)cHanja {
+- (instancetype)initWithCHanja:(const Hanja *)cHanja {
     if (cHanja == NULL) {
         return nil;
     }
@@ -32,7 +32,7 @@
     return self;
 }
 
-+ (id)hanjaWithCHanja:(const Hanja *)cHanja {
++ (instancetype)hanjaWithCHanja:(const Hanja *)cHanja {
     return [[self alloc] initWithCHanja:cHanja];
 }
 
@@ -69,12 +69,12 @@
 @implementation HGHanjaTable
 @synthesize cTable=_cTable;
 
-- (id)init {
+- (instancetype)init {
     NSBundle *bundle = [NSBundle mainBundle];
     return [self initWithContentOfFile:[bundle pathForResource:@"hanja" ofType:@"txt" inDirectory:@"hanja"]];
 }
 
-- (id)initWithContentOfFile:(NSString *)path {
+- (instancetype)initWithContentOfFile:(NSString *)path {
     self = [super init];
     if (self != nil) {
         self->_path = path;
@@ -113,7 +113,7 @@
 @implementation HGHanjaList
 @synthesize cList=_cList, array=_array;
 
-- (id)initWithCHanjaList:(HanjaList *)cHanjaList  {
+- (instancetype)initWithCHanjaList:(HanjaList *)cHanjaList  {
     if (cHanjaList == NULL) {
         return nil;
     }
@@ -124,7 +124,7 @@
     return self;
 }
 
-+ (id)listWithCHanjaList:(HanjaList *)cHanjaList {
++ (instancetype)listWithCHanjaList:(HanjaList *)cHanjaList {
     return [[self alloc] initWithCHanjaList:cHanjaList];
 }
 

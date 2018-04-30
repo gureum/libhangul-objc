@@ -35,9 +35,9 @@
 @property(nonatomic, readonly) HangulKeyboard *data;
 
 //! @brief  HangulKeyboard 데이터를 기반으로 객체 생성
-- (id)initWithKeyboardData:(HangulKeyboard *)data freeWhenDone:(BOOL)YesOrNo;
+- (instancetype)initWithKeyboardData:(HangulKeyboard *)data freeWhenDone:(BOOL)YesOrNo NS_DESIGNATED_INITIALIZER;
 //! @brief  HangulKeyboard 데이터를 기반으로 객체 생성
-+ (id)keyboardWithKeyboardData:(HangulKeyboard *)data freeWhenDone:(BOOL)YesOrNo;
++ (instancetype)keyboardWithKeyboardData:(HangulKeyboard *)data freeWhenDone:(BOOL)YesOrNo;
 
 //! @brief @ref hangul_keyboard_set_type
 - (void)setType:(int)type;
@@ -47,10 +47,10 @@
 /*!
     @brief  출력 형태에 관한 상수
 */
-typedef enum {
+typedef NS_ENUM(unsigned int, HGOutputMode) {
     HGOutputModeSyllable = HANGUL_OUTPUT_SYLLABLE,
     HGOutputModeJamo = HANGUL_OUTPUT_JAMO,
-}   HGOutputMode;
+};
 
 /*!
     @brief  @ref HangulInputContext 를 감싼다.
@@ -64,8 +64,9 @@ typedef enum {
 //! @brief  미구현 기능을 이용하기 위해 HangulInputContext 에 직접 접근
 @property(nonatomic, readonly) HangulInputContext *context;
 
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 //! @brief  @ref hangul_ic_new @ref hangul_ic_delete
-- (id)initWithKeyboardIdentifier:(NSString *)code;
+- (instancetype)initWithKeyboardIdentifier:(NSString *)code NS_DESIGNATED_INITIALIZER;
 //! @brief  @ref hangul_ic_process
 - (BOOL)process:(int)ascii;
 //! @brief  @ref hangul_ic_reset
@@ -104,7 +105,7 @@ typedef enum {
 //! @brief  @ref hangul_ic_flush
 - (const HGUCSChar *)flushUCSString;
 
-//! @brief  @ref hangul_ic_set_output_mode 
+//! @brief  @ref hangul_ic_set_output_mode
 - (void)setOutputMode:(HGOutputMode)mode;
 //! @brief  @ref hangul_ic_set_keyboard
 - (void)setKeyboard:(HGKeyboard *)aKeyboard;
