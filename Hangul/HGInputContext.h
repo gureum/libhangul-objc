@@ -68,7 +68,7 @@ typedef NS_ENUM(unsigned int, HGOutputMode) {
 //! @brief  @ref hangul_ic_new @ref hangul_ic_delete
 - (instancetype)initWithKeyboardIdentifier:(NSString *)code NS_DESIGNATED_INITIALIZER;
 //! @brief  @ref hangul_ic_process
-- (BOOL)process:(int)ascii;
+- (BOOL)process:(uint32_t)ascii;
 //! @brief  @ref hangul_ic_reset
 - (void)reset;
 //! @brief  @ref hangul_ic_backspace

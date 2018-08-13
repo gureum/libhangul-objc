@@ -90,7 +90,7 @@ const char *libhangul_data_dir() {
     hangul_ic_delete(self->_context);
 }
 
-- (BOOL)process:(int)ascii {
+- (BOOL)process:(uint32_t)ascii {
     return (BOOL)hangul_ic_process(self->_context, ascii);
 }
 
