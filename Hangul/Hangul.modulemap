@@ -1,0 +1,6 @@
+framework module Hangul {
+  umbrella header "Hangul-Umbrella.h"
+
+  export *
+  module * { export * }
+}

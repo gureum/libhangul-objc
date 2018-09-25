@@ -13,8 +13,13 @@
     libhangul의 hangul input context 코드를 Objective-C 객체 모델로 감싼다. 관련 libhangul 함수를 보기 위해서 hangul/hangul.h와 hangul/hangulinputcontext.c 를 본다.
 */
 
-#import <Foundation/Foundation.h>
-#import <Hangul/HGCharacter.h>
+@import Foundation;
+
+#include "hangul.h"
+
+#import "HGCharacter.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
     @brief  See @ref HangulKeyboard
@@ -64,7 +69,7 @@ typedef NS_ENUM(unsigned int, HGOutputMode) {
 
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 //! @brief  See @ref hangul_ic_new @ref hangul_ic_delete
-- (instancetype)initWithKeyboardIdentifier:(NSString *)code NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithKeyboardIdentifier:(NSString *)code NS_DESIGNATED_INITIALIZER;
 //! @brief  See @ref hangul_ic_process
 - (BOOL)process:(uint32_t)ascii;
 //! @brief  See @ref hangul_ic_reset
@@ -127,3 +132,4 @@ NSString *HGKeyboardIdentifierAtIndex(NSUInteger index);
 //! @brief  See @ref hangul_ic_get_keyboard_name
 NSString *HGKeyboardNameAtIndex(NSUInteger index);
 
+NS_ASSUME_NONNULL_END
