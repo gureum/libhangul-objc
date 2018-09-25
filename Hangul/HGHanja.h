@@ -17,7 +17,7 @@
 #include <Hangul/hangul.h>
 
 /*!
- @brief  @ref Hanja 를 감싼다.
+ @brief  See @ref Hanja
  
  Hanja 구조체에서 key, value, comment를 가져오는 인터페이스를 제공한다.
  */
@@ -31,7 +31,7 @@
 @end
 
 /*!
- @brief  @ref HanjaList 를 감싼다.
+ @brief  See @ref HanjaList
  
  HanjaList 구조체에서 count, key를 가져오는 인터페이스와 NSArray 변환을 제공한다.
  */
@@ -50,7 +50,7 @@
 @end
 
 /*!
- @brief  @ref HanjaTable 을 감싼다.
+ @brief  See @ref HanjaTable
  
  HanjaTable 의 load와 검색 인터페이스를 제공한다.
  파일을 지정하지 않고 생성할 경우 libhangul에 내장 된 기본 사전을 불러온다.

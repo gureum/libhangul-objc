@@ -16,10 +16,8 @@
 #import <Foundation/Foundation.h>
 #import <Hangul/HGCharacter.h>
 
-@class HGHangulCombination;
-
 /*!
-    @brief  @ref HangulKeyboard 를 감싼다.
+    @brief  See @ref HangulKeyboard
  
     @ref HGInputContext 를 위해 새 데이터를 만들때는 -init 을, 원래의 HangulKeyboard 데이터를 변환하기 위해서는 -initWithKeyboardData:freeWhenDone: 과 -keyboardWithKeyboardData:freeWhenDone: 을 사용한다.
 */
@@ -39,7 +37,7 @@
 //! @brief  HangulKeyboard 데이터를 기반으로 객체 생성
 + (instancetype)keyboardWithKeyboardData:(HangulKeyboard *)data freeWhenDone:(BOOL)YesOrNo;
 
-//! @brief @ref hangul_keyboard_set_type
+//! @brief  See @ref hangul_keyboard_set_type
 - (void)setType:(int)type;
 
 @end
@@ -53,7 +51,7 @@ typedef NS_ENUM(unsigned int, HGOutputMode) {
 };
 
 /*!
-    @brief  @ref HangulInputContext 를 감싼다.
+    @brief  See @ref HangulInputContext
  
     @ref HangulInputContext 의 기능에 대한 Objective-C의 객체 모델을 제공한다. 객체 모델이 지원하지 않는 기능에 대해서는 -context 로 libhangul의 컨텍스트에 직접 접근하여 사용할 수 있다.
 */
@@ -65,53 +63,53 @@ typedef NS_ENUM(unsigned int, HGOutputMode) {
 @property(nonatomic, readonly) HangulInputContext *context;
 
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
-//! @brief  @ref hangul_ic_new @ref hangul_ic_delete
+//! @brief  See @ref hangul_ic_new @ref hangul_ic_delete
 - (instancetype)initWithKeyboardIdentifier:(NSString *)code NS_DESIGNATED_INITIALIZER;
-//! @brief  @ref hangul_ic_process
+//! @brief  See @ref hangul_ic_process
 - (BOOL)process:(uint32_t)ascii;
-//! @brief  @ref hangul_ic_reset
+//! @brief  See @ref hangul_ic_reset
 - (void)reset;
-//! @brief  @ref hangul_ic_backspace
+//! @brief  See @ref hangul_ic_backspace
 - (BOOL)backspace;
 
-//! @brief  @ref hangul_ic_is_empty
+//! @brief  See @ref hangul_ic_is_empty
 @property(nonatomic, readonly, getter=isEmpty) BOOL empty;
-//! @brief  @ref hangul_ic_has_choseong
+//! @brief  See @ref hangul_ic_has_choseong
 @property(nonatomic, readonly) BOOL hasChoseong;
-//! @brief  @ref hangul_ic_has_jungseong
+//! @brief  See @ref hangul_ic_has_jungseong
 @property(nonatomic, readonly) BOOL hasJungseong;
-//! @brief  @ref hangul_ic_has_jongseong
+//! @brief  See @ref hangul_ic_has_jongseong
 @property(nonatomic, readonly) BOOL hasJongseong;
-//! @brief  @ref hangul_ic_is_transliteration
+//! @brief  See @ref hangul_ic_is_transliteration
 @property(nonatomic, readonly, getter=isTransliteration) BOOL transliteration;
 /*!
-    @brief  @ref hangul_ic_preedit_string
+    @brief  See @ref hangul_ic_preedit_string
  
     @ref IMKInputController 의 -composedString 과 대응한다.
 */
 @property(nonatomic, readonly) NSString *preeditString;
-//! @brief  @ref hangul_ic_preedit_string
+//! @brief  See @ref hangul_ic_preedit_string
 @property(nonatomic, readonly) const HGUCSChar *preeditUCSString;
-//! @brief  @ref hangul_ic_commit_string
+//! @brief  See @ref hangul_ic_commit_string
 @property(nonatomic, readonly) NSString *commitString;
-//! @brief  @ref hangul_ic_commit_string
+//! @brief  See @ref hangul_ic_commit_string
 @property(nonatomic, readonly) const HGUCSChar *commitUCSString;
 /*!
-    @brief  @ref hangul_ic_flush
+    @brief  See @ref hangul_ic_flush
  
     @discussion     현재 조합 중인 글자의 조합을 완료하고 @ref preeditString 을 결과로 돌려준다.
 */
 - (NSString *)flushString; // unclear naming...
-//! @brief  @ref hangul_ic_flush
+//! @brief  See @ref hangul_ic_flush
 - (const HGUCSChar *)flushUCSString;
 
-//! @brief  @ref hangul_ic_set_output_mode
+//! @brief  See @ref hangul_ic_set_output_mode
 - (void)setOutputMode:(HGOutputMode)mode;
-//! @brief  @ref hangul_ic_set_keyboard
+//! @brief  See @ref hangul_ic_set_keyboard
 - (void)setKeyboard:(HGKeyboard *)aKeyboard;
-//! @brief  @ref hangul_ic_set_keyboard
+//! @brief  See @ref hangul_ic_set_keyboard
 - (void)setKeyboardWithData:(HangulKeyboard *)keyboardData;
-//! @brief  @ref hangul_ic_select_keyboard
+//! @brief  See @ref hangul_ic_select_keyboard
 - (void)setKeyboardWithIdentifier:(NSString *)identifier;
 
 /* out of use, out of mind
@@ -124,8 +122,8 @@ void hangul_ic_connect_callback(HangulInputContext* hic, const char* event,
 /* out of use, out of mind
 unsigned    hangul_ic_get_n_keyboards();
 */
-//! @brief  @ref hangul_ic_get_keyboard_id 
+//! @brief  See @ref hangul_ic_get_keyboard_id
 NSString *HGKeyboardIdentifierAtIndex(NSUInteger index);
-//! @brief  @ref hangul_ic_get_keyboard_name
+//! @brief  See @ref hangul_ic_get_keyboard_name
 NSString *HGKeyboardNameAtIndex(NSUInteger index);
 
