@@ -1,0 +1,10 @@
+language: objective-c
+sudo: false
+xcode_project: Hangul.xcodeproj
+osx_image: xcode10
+matrix:
+  include:
+    - osx_image: xcode10
+      xcode_sdk: macosx
+      xcode_scheme: Hangul
+      xcode_destination: platform=macOS
