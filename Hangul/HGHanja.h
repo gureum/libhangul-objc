@@ -13,8 +13,11 @@
  libhangul의 한자 관련 코드를 Objective-C 객체 모델로 감싼다. 관련 libhangul 함수를 보기 위해서 hangul/hangul.h와 hangul/hanja.c 를 본다.
  */
 
-#import <Foundation/Foundation.h>
-#include <Hangul/hangul.h>
+@import Foundation;
+
+#include "hangul.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  @brief  See @ref Hanja
@@ -70,3 +73,5 @@
 - (HGHanjaList *)hanjasByPrefixSearching:(NSString *)key;
 
 @end
+
+NS_ASSUME_NONNULL_END

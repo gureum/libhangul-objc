@@ -9,7 +9,7 @@
 #ifndef Bridge_h
 #define Bridge_h
 
-#include <Hangul/hangul.h>
+#include "hangul.h"
 
 extern bool
 hangul_ic_push(HangulInputContext *hic, ucschar c);

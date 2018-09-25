@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#include <Hangul/hangul.h>
+@import ObjectiveC.runtime;
 
-#import <objc/runtime.h>
+#include "hangul.h"
 #import "HGHanja.h"
 
 @interface HGHanja ()

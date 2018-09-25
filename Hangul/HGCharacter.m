@@ -6,8 +6,10 @@
 //  Copyright 2011 youknowone.org. All rights reserved.
 //
 
+#include "hangul.h"
+#include "hangulinternals.h"
+
 #import "HGCharacter.h"
-#include <Hangul/hangulinternals.h>
 
 inline BOOL HGCharacterIsChoseong(HGUCSChar character) {
     return (BOOL)hangul_is_choseong(character);

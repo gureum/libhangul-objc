@@ -11,13 +11,7 @@
 #define dlog(...)
 #define DEBUG_HANGUL FALSE
 
-const char *libhangul_data_dir() {
-    // return "/Users/youknowone/Projects/Gureum/OSX/data";
-    NSBundle *hangulBundle = [NSBundle mainBundle];
-    NSString *path = hangulBundle.resourcePath;
-    return path.fileSystemRepresentation;
-}
-
+NS_ASSUME_NONNULL_BEGIN
 
 @implementation HGKeyboard 
 @synthesize data=_data;
@@ -74,7 +68,7 @@ const char *libhangul_data_dir() {
     return [super init];
 }
 
-- (instancetype)initWithKeyboardIdentifier:(NSString *)code {
+- (nullable instancetype)initWithKeyboardIdentifier:(NSString *)code {
     self = [super init];
     if (self) {
         self->_context = hangul_ic_new(code.UTF8String);
@@ -177,3 +171,5 @@ inline NSString *HGKeyboardIdentifierAtIndex(NSUInteger index) {
 inline NSString *HGKeyboardNameAtIndex(NSUInteger index) {
     return @(hangul_keyboard_list_get_keyboard_name((unsigned)index));
 }
+
+NS_ASSUME_NONNULL_END

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Hangul
 
 func ord(_ c: String) -> Int32 {
     return Int32(c.unicodeScalars.first!.value)
@@ -23,25 +24,35 @@ class HangulTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    /*
+
     func testKeyboard1() {
         hangul_init()
         let hic = hangul_ic_new("3fx")
-        hangul_ic_process(hic, ord(c: "m"))
-        hangul_ic_process(hic, ord(c: "f"))
-        hangul_ic_process(hic, ord(c: "["))
-        hangul_ic_process(hic, ord(c: "s"))
+        hangul_ic_process(hic, ord("m"))
+        hangul_ic_process(hic, ord("f"))
+        hangul_ic_process(hic, ord("["))
+        hangul_ic_process(hic, ord("s"))
         print(hic)
-    }*/
+    }
 
     func testKeyboard2() {
         hangul_init();
         let hic = hangul_ic_new("3gs")
-        hangul_ic_process(hic, ord(c: "j"))
-        hangul_ic_process(hic, ord(c: "t"))
-        hangul_ic_process(hic, ord(c: "["))
-        hangul_ic_process(hic, ord(c: "x"))
+        hangul_ic_process(hic, ord("j"))
+        hangul_ic_process(hic, ord("t"))
+        hangul_ic_process(hic, ord("["))
+        hangul_ic_process(hic, ord("x"))
         print(hic)
+    }
+
+    func testBackspace() {
+        hangul_init();
+        let hic = hangul_ic_new("3gs")
+        hangul_ic_process(hic, ord("j"))
+        hangul_ic_process(hic, ord("t"))
+        hangul_ic_process(hic, ord("["))
+        hangul_ic_process(hic, ord("\u{8}"))
+        print(hic as Any)
     }
 
     func testPerformanceExample() {
