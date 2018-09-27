@@ -67,10 +67,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithContentOfFile:(NSString *)path NS_DESIGNATED_INITIALIZER;
 
-- (HGHanjaList *)hanjasByExactMatching:(NSString *)key;
-- (HGHanjaList *)hanjasByPrefixMatching:(NSString *)key;
-- (HGHanjaList *)hanjasBySuffixMatching:(NSString *)key;
-- (HGHanjaList *)hanjasByPrefixSearching:(NSString *)key;
+- (nullable HGHanjaList *)hanjasByExactMatching:(NSString *)key;
+- (nullable HGHanjaList *)hanjasByPrefixMatching:(NSString *)key;
+- (nullable HGHanjaList *)hanjasBySuffixMatching:(NSString *)key;
+- (nullable HGHanjaList *)hanjasByPrefixSearching:(NSString *)key;
 
 @end
 

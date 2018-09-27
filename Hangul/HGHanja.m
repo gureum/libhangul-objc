@@ -91,19 +91,19 @@
     return [NSString stringWithFormat:@"<HGHanjaTable: %@>", self->_path];
 }
 
-- (HGHanjaList *)hanjasByExactMatching:(NSString *)key {
+- (nullable HGHanjaList *)hanjasByExactMatching:(NSString *)key {
     return [HGHanjaList listWithCHanjaList:hanja_table_match_exact(self->_cTable, key.UTF8String)];
 }
 
-- (HGHanjaList *)hanjasByPrefixMatching:(NSString *)key {
+- (nullable HGHanjaList *)hanjasByPrefixMatching:(NSString *)key {
     return [HGHanjaList listWithCHanjaList:hanja_table_match_prefix(self->_cTable, key.UTF8String)];    
 }
 
-- (HGHanjaList *)hanjasBySuffixMatching:(NSString *)key {
+- (nullable HGHanjaList *)hanjasBySuffixMatching:(NSString *)key {
     return [HGHanjaList listWithCHanjaList:hanja_table_match_suffix(self->_cTable, key.UTF8String)];
 }
 
-- (HGHanjaList *)hanjasByPrefixSearching:(NSString *)key {
+- (nullable HGHanjaList *)hanjasByPrefixSearching:(NSString *)key {
     return [HGHanjaList listWithCHanjaList:hanja_table_search_prefix(self->_cTable, key.UTF8String)];
 }
 
