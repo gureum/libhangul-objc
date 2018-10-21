@@ -76,6 +76,8 @@ typedef NS_ENUM(unsigned int, HGOutputMode) {
 - (void)reset;
 //! @brief  See @ref hangul_ic_backspace
 - (BOOL)backspace;
+//! @brief  See @ref hangul_ic_set_option
+- (void)setOption:(NSInteger)option value:(BOOL)value;
 
 //! @brief  See @ref hangul_ic_is_empty
 @property(nonatomic, readonly, getter=isEmpty) BOOL empty;
