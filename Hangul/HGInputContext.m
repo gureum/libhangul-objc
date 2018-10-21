@@ -96,6 +96,10 @@ NS_ASSUME_NONNULL_BEGIN
     return (BOOL)hangul_ic_backspace(self->_context);
 }
 
+- (void)setOption:(NSInteger)option value:(BOOL)value {
+    hangul_ic_set_option(self->_context, option, value);
+}
+
 - (BOOL)isEmpty {
     return (BOOL)hangul_ic_is_empty(self->_context);
 }
