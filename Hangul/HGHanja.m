@@ -129,7 +129,9 @@
 }
 
 - (void)dealloc {
-    hanja_list_delete(self->_cList);
+    if (self->_cList) {
+        hanja_list_delete(self->_cList);
+    }
 }
 
 - (NSUInteger)count {
@@ -152,12 +154,15 @@
         for (HGHanja *hanja in self) {
             [mArray addObject:hanja];
         }
-        self->_array = [[NSArray alloc] initWithArray:mArray];
+        self->_array = mArray;
     }
     return self->_array;
 }
 
 - (NSString *)description {
+    if (self->_cList == NULL) {
+        return [NSString stringWithFormat:@"<%s()>", class_getName(self.class)];
+    }
     return [NSString stringWithFormat:@"<%s('%@',%lu)>", class_getName(self.class), self.key, self.count];
 }
 
