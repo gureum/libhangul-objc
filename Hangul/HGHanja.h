@@ -40,11 +40,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface HGHanjaList : NSObject<NSFastEnumeration> {
     HanjaList *_cList;
-    NSArray *_array;
+    NSArray<HGHanja*> *_array;
 }
 
 @property(nonatomic, readonly) HanjaList *cList;
-@property(nonatomic, readonly) NSArray *array;
+@property(nonatomic, readonly) NSArray<HGHanja*> *array;
 @property(nonatomic, readonly) NSUInteger count;
 @property(nonatomic, readonly) NSString *key;
 
@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, readonly) HanjaTable *cTable;
 
-- (instancetype)initWithContentOfFile:(NSString *)path NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithContentOfFile:(NSString *)path NS_DESIGNATED_INITIALIZER;
 
 - (nullable HGHanjaList *)hanjasByExactMatching:(NSString *)key;
 - (nullable HGHanjaList *)hanjasByPrefixMatching:(NSString *)key;
