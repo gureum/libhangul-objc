@@ -13,14 +13,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@implementation HGKeyboard 
-@synthesize data=_data;
-
-+ (void)initialize {
-    if (self == [HGKeyboard class]) {
+__attribute__((constructor))
+static void HangulInitialize() {
+    static bool initialized = 0;
+    if (!initialized) {
+        // Initialization code.
+        initialized = 1;
         hangul_init();
     }
 }
+
+__attribute__((destructor))
+static void HangulFinalize() {
+    hangul_fini();
+}
+
+@implementation HGKeyboard
+@synthesize data=_data;
 
 //! @ref hangul_keyboard_new
 - (instancetype)init {
