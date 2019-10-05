@@ -106,7 +106,7 @@ static void HangulFinalize() {
 }
 
 - (void)setOption:(NSInteger)option value:(BOOL)value {
-    hangul_ic_set_option(self->_context, option, value);
+    hangul_ic_set_option(self->_context, (int)option, value);
 }
 
 - (BOOL)isEmpty {
