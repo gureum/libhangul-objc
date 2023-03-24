@@ -8,6 +8,8 @@
 
 #import "HGInputContext.h"
 
+extern unsigned hangul_keyboard_list_load_dir(const char* path);
+
 #define dlog(...)
 #define DEBUG_HANGUL FALSE
 
@@ -20,6 +22,12 @@ static void HangulInitialize() {
         // Initialization code.
         initialized = 1;
         hangul_init();
+
+        // load keyboad data
+        NSBundle *hangulBundle = [NSBundle bundleForClass:[HGKeyboard class]];
+        NSString *dataPath = hangulBundle.resourcePath;
+        NSString *keyboardsPath = [dataPath stringByAppendingString:@"/keyboards"];
+        hangul_keyboard_list_load_dir(keyboardsPath.fileSystemRepresentation);
     }
 }
 

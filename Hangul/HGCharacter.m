@@ -102,7 +102,6 @@ inline NSInteger HGGetSyllablesFromJamos(const HGUCSChar* jamos, NSInteger jamos
 - (instancetype)initWithUCSString:(const HGUCSChar *)ucsString {
     NSInteger length = wcslen((const wchar_t *)ucsString); // XXX: 길이 알아내는 or 길이 없이 NSString 만드는 방법이 있을까?
     // initWithCString + UTF32LE 로는 안된다. null 문자가 보이면 무조건 종료하는 듯
-    //return [self initWithBytesNoCopy:(void *)ucsString length:length encoding:NSUTF32LittleEndianStringEncoding freeWhenDone:NO];
     return [self initWithBytes:ucsString length:length*sizeof(HGUCSChar) encoding:NSUTF32LittleEndianStringEncoding];
 }
 

@@ -32,7 +32,6 @@
 		38F858F6215A8CA800CD80AE /* libexpat.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 389B61031F53191C0088AE25 /* libexpat.tbd */; };
 		38F8591D215A8F6600CD80AE /* Hangul.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F858E3215A8B2200CD80AE /* Hangul.framework */; };
 		38F85935215A913D00CD80AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38FA21F81423219E00444D67 /* InfoPlist.strings */; };
-		38F8593B215AA54A00CD80AE /* libhangul.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F858D8215A879C00CD80AE /* libhangul.m */; };
 		38F85944215AAA2800CD80AE /* Hangul-Umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3810008D14B53252004224DE /* Hangul-Umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38F85945215AAB0600CD80AE /* hangul.h in Headers */ = {isa = PBXBuildFile; fileRef = 3890A8C71423247C00067337 /* hangul.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -107,14 +106,13 @@
 		3890A8C61423247C00067337 /* hangul-gettext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "hangul-gettext.h"; sourceTree = "<group>"; };
 		3890A8C71423247C00067337 /* hangul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangul.h; sourceTree = "<group>"; };
 		3890A8C81423247C00067337 /* hangulctype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hangulctype.c; sourceTree = "<group>"; };
-		3890A8C91423247C00067337 /* hangulinputcontext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hangulinputcontext.c; sourceTree = "<group>"; };
+		3890A8C91423247C00067337 /* hangulinputcontext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hangulinputcontext.c; sourceTree = "<group>"; tabWidth = 8; };
 		3890A8CA1423247C00067337 /* hangulinternals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangulinternals.h; sourceTree = "<group>"; };
 		3890A8CB1423247C00067337 /* hangulkeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hangulkeyboard.h; sourceTree = "<group>"; };
 		3890A8CC1423247C00067337 /* hanja.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hanja.c; sourceTree = "<group>"; tabWidth = 8; };
 		3890A8CD1423247C00067337 /* hanjacompatible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hanjacompatible.h; sourceTree = "<group>"; };
 		389B61011F52F9310088AE25 /* hangulkeyboard.c */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.c; path = hangulkeyboard.c; sourceTree = "<group>"; tabWidth = 8; };
 		389B61031F53191C0088AE25 /* libexpat.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libexpat.tbd; path = usr/lib/libexpat.tbd; sourceTree = SDKROOT; };
-		38F858D8215A879C00CD80AE /* libhangul.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libhangul.m; sourceTree = "<group>"; };
 		38F858E3215A8B2200CD80AE /* Hangul.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hangul.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F85946215AB09100CD80AE /* Hangul.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = Hangul.modulemap; sourceTree = "<group>"; };
 		38FA21F41423219E00444D67 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -242,7 +240,6 @@
 		38FA21F51423219E00444D67 /* Hangul */ = {
 			isa = PBXGroup;
 			children = (
-				38F858D8215A879C00CD80AE /* libhangul.m */,
 				3810008D14B53252004224DE /* Hangul-Umbrella.h */,
 				3890A8B11423238E00067337 /* HGCharacter.h */,
 				3890A8B21423238E00067337 /* HGCharacter.m */,
@@ -432,7 +429,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F8593B215AA54A00CD80AE /* libhangul.m in Sources */,
 				38F858F0215A8B6000CD80AE /* HGHanja.m in Sources */,
 				38F858EC215A8B6000CD80AE /* HGCharacter.m in Sources */,
 				38F858EE215A8B6000CD80AE /* HGInputContext.m in Sources */,
@@ -503,8 +499,9 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"LIBHANGUL_DEFAULT_HANJA_DIC=\"\\\"$(INSTALL_PATH)/HanjaDictionary\\\"\"",
+					"LIBHANGUL_DATA_DIR=\"\\\"$(INSTALL_PATH)/keyboards\\\"\"",
 					"ENABLE_EXTERNAL_KEYBOARDS=1",
-					"LIBHANGUL_DYNAMIC_DATA_DIR=1",
+					"HAVE_GLOB_H=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				INSTALL_PATH = /usr/local/lib;
@@ -523,8 +520,9 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"LIBHANGUL_DEFAULT_HANJA_DIC=\"\\\"$(INSTALL_PATH)/HanjaDictionary\\\"\"",
+					"LIBHANGUL_DATA_DIR=\"\\\"$(INSTALL_PATH)/keyboards\\\"\"",
 					"ENABLE_EXTERNAL_KEYBOARDS=1",
-					"LIBHANGUL_DYNAMIC_DATA_DIR=1",
+					"HAVE_GLOB_H=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				INSTALL_PATH = /usr/local/lib;
